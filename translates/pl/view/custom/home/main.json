@@ -1,0 +1,7 @@
+{"pl.view.custom.home.main":{
+  "boxes": {
+    "cli": "**GoatCLI** to nowoczesny generator kodu. Sprawi, że zmiany czy automatyzacja dodawania nowych funkcjonalności będzie jeszcze prostsza. ",
+    "cms": "**GoatCMS** to system zarządzania treścią nowej generacji. Przyjazny dla użytkownika. Przyjazny dla programistów. Wprowadzi rozwój twojej rzeczywistości IT na nowy poziom. Gotowy na skalowanie pozwoli osiągnąć efekty o jakiej do tej pory nie śniłeś.",
+    "core": "**GoatCore** jest zbiorem bibliotek i mikro frameworkiem. Miałeś kiedyś wrażenie, że brakuje Ci czegoś w golang? Teraz dependency injection, zarządzanie konfiguracją to żaden problem."
+  }
+}}

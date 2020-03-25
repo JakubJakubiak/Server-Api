@@ -1,0 +1,10 @@
+{
+  "en.view.admin.model.userconnect.list": {
+    "title": "UserConnect",
+    "description": "Add a new userconnect here.",
+    "submit": "Submit",
+    "edit_btn": "Edit",
+    "insert_btn": "Insert",
+    "delete_btn": "Delete"
+  }
+}

@@ -1,0 +1,67 @@
+{{- define "form.model.user" -}}
+
+{{- $validPrefix:=(print .Lang ".form.valid.") -}}
+{{- $formPrefix:=(print .Lang ".form.fields.") -}}
+
+<form method="post" enctype="application/x-www-form-urlencoded" class="model-user-form">
+
+    {{- if .Fields.Firstname -}}
+    <div class="form-group">
+      <label for="Firstname">{{TranslateFor "firstname" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Firstname -}}" name="Firstname" type="text">
+      {{- messages .Valid $validPrefix "error" "Firstname" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Lastname -}}
+    <div class="form-group">
+      <label for="Lastname">{{TranslateFor "lastname" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Lastname -}}" name="Lastname" type="text">
+      {{- messages .Valid $validPrefix "error" "Lastname" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Email -}}
+    <div class="form-group">
+      <label for="Email">{{TranslateFor "email" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Email -}}" name="Email" type="text">
+      {{- messages .Valid $validPrefix "error" "Email" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Password -}}
+    <div class="form-group">
+      <label for="Password">{{TranslateFor "password" $formPrefix}}:</label>
+      <input class="form-control" value="" name="Password" type="password">
+      {{- messages .Valid $validPrefix "error" "Password" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Roles -}}
+    <div class="form-group">
+      <label for="Roles">{{TranslateFor "roles" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Roles -}}" name="Roles" type="text">
+      {{- messages .Valid $validPrefix "error" "Roles" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Username -}}
+    <div class="form-group">
+      <label for="Username">{{TranslateFor "username" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Username -}}" name="Username" type="text">
+      {{- messages .Valid $validPrefix "error" "Username" -}}
+    </div>
+
+    {{- end -}}
+
+  <div class="form-group">
+    <input type="submit" class="btn btn-lg btn-primary btn-block" value='{{TranslateFor "submit" $formPrefix}}'></input>
+  </div>
+</form>
+
+{{- end -}}

@@ -1,0 +1,41 @@
+{
+  "mailer": {
+    "smtp": {
+      "addr": "asd",
+      "auth": {
+        "username": "asd",
+        "password": "asd",
+        "identity": "asd"
+      }
+    }
+  },
+  "translate": {
+    "langs": "en, pl",
+    "default": "en"
+  },
+  "router": {
+    "host": ":3434",
+    "security": {
+      "mode": "HTTP"
+    }
+  },
+  "app": {
+    "baseURL": ""
+  },
+  "oauth": {
+    "github": {
+      "app": "asd",
+      "secret": "sad"
+    }
+  },
+  "template": {
+    "cached": "false"
+  },
+  "database": {
+    "engine": "sqlite",
+    "url": "./data/database.db"
+  },
+  "acl.anonymous": {
+    "roles": "admin"
+  }
+}

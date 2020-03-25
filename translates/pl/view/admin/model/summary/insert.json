@@ -1,0 +1,8 @@
+{
+  "pl.view.admin.model.summary.insert": {
+    "title": "Summary",
+    "description": "Add a new summary here.",
+    "submit": "Submit",
+    "go_back_to_list": "Go back to list"
+  }
+}

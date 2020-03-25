@@ -1,0 +1,31 @@
+{{- define "form.model.allegroitem" -}}
+
+{{- $validPrefix:=(print .Lang ".form.valid.") -}}
+{{- $formPrefix:=(print .Lang ".form.fields.") -}}
+
+<form method="post" enctype="application/x-www-form-urlencoded" class="model-allegroitem-form">
+
+    {{- if .Fields.Name -}}
+    <div class="form-group">
+      <label for="Name">{{TranslateFor "name" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Name -}}" name="Name" type="text">
+      {{- messages .Valid $validPrefix "error" "Name" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.AllegroID -}}
+    <div class="form-group">
+      <label for="AllegroID">{{TranslateFor "allegroid" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.AllegroID -}}" name="AllegroID" type="text">
+      {{- messages .Valid $validPrefix "error" "AllegroID" -}}
+    </div>
+
+    {{- end -}}
+
+  <div class="form-group">
+    <input type="submit" class="btn btn-lg btn-primary btn-block" value='{{TranslateFor "submit" $formPrefix}}'></input>
+  </div>
+</form>
+
+{{- end -}}

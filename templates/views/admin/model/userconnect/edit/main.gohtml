@@ -1,0 +1,28 @@
+{{- define "content" -}}
+
+{{ $prefix := (print .Lang ".view.admin.model.userconnect.edit.") }}
+{{ $validPrefix := (print .Lang ".form.valid.") }}
+{{ $formPrefix := (print .Lang ".form.fields.") }}
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1>{{ TranslateFor "title" $prefix}}</h1>
+    {{ TranslateFor "description" $prefix}}
+    <br />
+
+    {{- if .Data.IsUpdated }}
+      <div class="alert alert-success">
+        {{ TranslateFor "is_updated" $prefix}}
+      </div>
+    {{- end }}
+
+    {{- template "form.model.userconnect" (dict "Data" .Data.Entity "Lang" .Lang "Valid" .Data.Valid "Fields" .Data.Fields) -}}
+
+    <div class="footer-menu">
+      <a href="/admin/userconnect">{{ TranslateFor "go_back_to_list" $prefix}}</a>
+    </div>
+
+  </div>
+</div>
+
+{{- end }}
+

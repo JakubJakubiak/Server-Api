@@ -1,0 +1,9 @@
+{
+  "en.view.admin.model.log.edit": {
+    "title": "Log",
+    "description": "Add a new log here.",
+    "submit": "Submit",
+    "go_back_to_list": "Go back to list",
+    "is_updated": "Updated data"
+  }
+}

@@ -1,0 +1,9 @@
+{{- define "tools" -}}{{- $root := . -}}
+<a class="btn btn-primary" href="/admin/allegrocategory/{{$root.Row.ID}}">
+  {{ TranslateFor "edit_btn" $root.Prefix }}
+</a>
+<form method="POST" action="/admin/allegrocategory/{{$root.Row.ID}}$delete">
+  <input class="btn btn-danger" type="submit" value="{{TranslateFor "delete_btn" $root.Prefix}}" />
+</form>
+
+{{- end -}}

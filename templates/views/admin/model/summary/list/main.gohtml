@@ -1,0 +1,73 @@
+{{- define "content" -}}
+
+{{ $prefix := (print .Lang ".view.admin.model.summary.list.") }}
+<div class="admin-view summary-admin-view">
+
+<h1>Summary</h1>
+
+<div class="top-nav">
+  <a type="button" class="btn btn-primary" href="/admin/summary/insert">
+    {{ TranslateFor "insert_btn" $prefix }}</a>
+  </a>
+</div>
+
+{{ if eq (len .Data.Collection) 0 -}}
+No data to show
+{{- else }}
+  <div class="admin-table">
+    <div class="row head">
+        <div class="col string">WikiType</div>
+        <div class="col string">Title</div>
+        <div class="col string">ThumbnailWidth</div>
+        <div class="col string">ThumbnailHeight</div>
+        <div class="col string">OriginalImageSource</div>
+        <div class="col string">OriginalImageWidth</div>
+        <div class="col string">OriginalImageHeight</div>
+        <div class="col string">Lang</div>
+        <div class="col string">Dir</div>
+        <div class="col string">Revision</div>
+        <div class="col datetime">Timestamp</div>
+        <div class="col string">Extract</div>
+        <div class="col string">DisplayTitle</div>
+        <div class="col string">ExtractHTML</div>
+        <div class="col string">NamespaceID</div>
+        <div class="col string">NamespaceText</div>
+        <div class="col string">WikibaseItem</div>
+        <div class="col string">TitlesCanonical</div>
+        <div class="col string">Display</div>
+        <div class="col string">PageID</div>
+        <div class="col string">ThumbnailSource</div>
+      <div class="col tools"></div>
+    </div>{{- range $i, $row := .Data.Collection }}
+    <div class="row">
+        <div class="col string">{{- $row.WikiType -}}</div>
+        <div class="col string">{{- $row.Title -}}</div>
+        <div class="col string">{{- $row.ThumbnailWidth -}}</div>
+        <div class="col string">{{- $row.ThumbnailHeight -}}</div>
+        <div class="col string">{{- $row.OriginalImageSource -}}</div>
+        <div class="col string">{{- $row.OriginalImageWidth -}}</div>
+        <div class="col string">{{- $row.OriginalImageHeight -}}</div>
+        <div class="col string">{{- $row.Lang -}}</div>
+        <div class="col string">{{- $row.Dir -}}</div>
+        <div class="col string">{{- $row.Revision -}}</div>
+        <div class="col datetime">{{- $row.Timestamp -}}</div>
+        <div class="col string">{{- $row.Extract -}}</div>
+        <div class="col string">{{- $row.DisplayTitle -}}</div>
+        <div class="col string">{{- $row.ExtractHTML -}}</div>
+        <div class="col string">{{- $row.NamespaceID -}}</div>
+        <div class="col string">{{- $row.NamespaceText -}}</div>
+        <div class="col string">{{- $row.WikibaseItem -}}</div>
+        <div class="col string">{{- $row.TitlesCanonical -}}</div>
+        <div class="col string">{{- $row.Display -}}</div>
+        <div class="col string">{{- $row.PageID -}}</div>
+        <div class="col string">{{- $row.ThumbnailSource -}}</div>
+      <div class="col tools">
+          {{- template "tools" (dict "Row" $row "Prefix" $prefix) -}}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+{{- end }}
+</div>
+
+{{- end }}

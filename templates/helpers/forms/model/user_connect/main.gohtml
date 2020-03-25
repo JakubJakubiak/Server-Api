@@ -1,0 +1,31 @@
+{{- define "form.model.userconnect" -}}
+
+{{- $validPrefix:=(print .Lang ".form.valid.") -}}
+{{- $formPrefix:=(print .Lang ".form.fields.") -}}
+
+<form method="post" enctype="application/x-www-form-urlencoded" class="model-userconnect-form">
+
+    {{- if .Fields.Service -}}
+    <div class="form-group">
+      <label for="Service">{{TranslateFor "service" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Service -}}" name="Service" type="text">
+      {{- messages .Valid $validPrefix "error" "Service" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.RemoteID -}}
+    <div class="form-group">
+      <label for="RemoteID">{{TranslateFor "remoteid" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.RemoteID -}}" name="RemoteID" type="text">
+      {{- messages .Valid $validPrefix "error" "RemoteID" -}}
+    </div>
+
+    {{- end -}}
+
+  <div class="form-group">
+    <input type="submit" class="btn btn-lg btn-primary btn-block" value='{{TranslateFor "submit" $formPrefix}}'></input>
+  </div>
+</form>
+
+{{- end -}}

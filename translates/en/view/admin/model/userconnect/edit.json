@@ -1,0 +1,9 @@
+{
+  "en.view.admin.model.userconnect.edit": {
+    "title": "UserConnect",
+    "description": "Add a new userconnect here.",
+    "submit": "Submit",
+    "go_back_to_list": "Go back to list",
+    "is_updated": "Updated data"
+  }
+}

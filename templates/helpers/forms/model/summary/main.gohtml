@@ -1,0 +1,202 @@
+{{- define "form.model.summary" -}}
+
+{{- $validPrefix:=(print .Lang ".form.valid.") -}}
+{{- $formPrefix:=(print .Lang ".form.fields.") -}}
+
+<form method="post" enctype="application/x-www-form-urlencoded" class="model-summary-form">
+
+    {{- if .Fields.WikiType -}}
+    <div class="form-group">
+      <label for="WikiType">{{TranslateFor "wikitype" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.WikiType -}}" name="WikiType" type="text">
+      {{- messages .Valid $validPrefix "error" "WikiType" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Title -}}
+    <div class="form-group">
+      <label for="Title">{{TranslateFor "title" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Title -}}" name="Title" type="text">
+      {{- messages .Valid $validPrefix "error" "Title" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.ThumbnailWidth -}}
+    <div class="form-group">
+      <label for="ThumbnailWidth">{{TranslateFor "thumbnailwidth" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.ThumbnailWidth -}}" name="ThumbnailWidth" type="text">
+      {{- messages .Valid $validPrefix "error" "ThumbnailWidth" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.ThumbnailHeight -}}
+    <div class="form-group">
+      <label for="ThumbnailHeight">{{TranslateFor "thumbnailheight" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.ThumbnailHeight -}}" name="ThumbnailHeight" type="text">
+      {{- messages .Valid $validPrefix "error" "ThumbnailHeight" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.OriginalImageSource -}}
+    <div class="form-group">
+      <label for="OriginalImageSource">{{TranslateFor "originalimagesource" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.OriginalImageSource -}}" name="OriginalImageSource" type="text">
+      {{- messages .Valid $validPrefix "error" "OriginalImageSource" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.OriginalImageWidth -}}
+    <div class="form-group">
+      <label for="OriginalImageWidth">{{TranslateFor "originalimagewidth" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.OriginalImageWidth -}}" name="OriginalImageWidth" type="text">
+      {{- messages .Valid $validPrefix "error" "OriginalImageWidth" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.OriginalImageHeight -}}
+    <div class="form-group">
+      <label for="OriginalImageHeight">{{TranslateFor "originalimageheight" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.OriginalImageHeight -}}" name="OriginalImageHeight" type="text">
+      {{- messages .Valid $validPrefix "error" "OriginalImageHeight" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Lang -}}
+    <div class="form-group">
+      <label for="Lang">{{TranslateFor "lang" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Lang -}}" name="Lang" type="text">
+      {{- messages .Valid $validPrefix "error" "Lang" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Dir -}}
+    <div class="form-group">
+      <label for="Dir">{{TranslateFor "dir" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Dir -}}" name="Dir" type="text">
+      {{- messages .Valid $validPrefix "error" "Dir" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Revision -}}
+    <div class="form-group">
+      <label for="Revision">{{TranslateFor "revision" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Revision -}}" name="Revision" type="text">
+      {{- messages .Valid $validPrefix "error" "Revision" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Timestamp -}}
+    <div class="form-group">
+      <label for="Timestamp">{{TranslateFor "timestamp" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Timestamp -}}" name="Timestamp" type="bad type datetime">
+      {{- messages .Valid $validPrefix "error" "Timestamp" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Extract -}}
+    <div class="form-group">
+      <label for="Extract">{{TranslateFor "extract" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Extract -}}" name="Extract" type="text">
+      {{- messages .Valid $validPrefix "error" "Extract" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.DisplayTitle -}}
+    <div class="form-group">
+      <label for="DisplayTitle">{{TranslateFor "displaytitle" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.DisplayTitle -}}" name="DisplayTitle" type="text">
+      {{- messages .Valid $validPrefix "error" "DisplayTitle" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.ExtractHTML -}}
+    <div class="form-group">
+      <label for="ExtractHTML">{{TranslateFor "extracthtml" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.ExtractHTML -}}" name="ExtractHTML" type="text">
+      {{- messages .Valid $validPrefix "error" "ExtractHTML" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.NamespaceID -}}
+    <div class="form-group">
+      <label for="NamespaceID">{{TranslateFor "namespaceid" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.NamespaceID -}}" name="NamespaceID" type="text">
+      {{- messages .Valid $validPrefix "error" "NamespaceID" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.NamespaceText -}}
+    <div class="form-group">
+      <label for="NamespaceText">{{TranslateFor "namespacetext" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.NamespaceText -}}" name="NamespaceText" type="text">
+      {{- messages .Valid $validPrefix "error" "NamespaceText" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.WikibaseItem -}}
+    <div class="form-group">
+      <label for="WikibaseItem">{{TranslateFor "wikibaseitem" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.WikibaseItem -}}" name="WikibaseItem" type="text">
+      {{- messages .Valid $validPrefix "error" "WikibaseItem" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.TitlesCanonical -}}
+    <div class="form-group">
+      <label for="TitlesCanonical">{{TranslateFor "titlescanonical" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.TitlesCanonical -}}" name="TitlesCanonical" type="text">
+      {{- messages .Valid $validPrefix "error" "TitlesCanonical" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Display -}}
+    <div class="form-group">
+      <label for="Display">{{TranslateFor "display" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Display -}}" name="Display" type="text">
+      {{- messages .Valid $validPrefix "error" "Display" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.PageID -}}
+    <div class="form-group">
+      <label for="PageID">{{TranslateFor "pageid" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.PageID -}}" name="PageID" type="text">
+      {{- messages .Valid $validPrefix "error" "PageID" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.ThumbnailSource -}}
+    <div class="form-group">
+      <label for="ThumbnailSource">{{TranslateFor "thumbnailsource" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.ThumbnailSource -}}" name="ThumbnailSource" type="text">
+      {{- messages .Valid $validPrefix "error" "ThumbnailSource" -}}
+    </div>
+
+    {{- end -}}
+
+  <div class="form-group">
+    <input type="submit" class="btn btn-lg btn-primary btn-block" value='{{TranslateFor "submit" $formPrefix}}'></input>
+  </div>
+</form>
+
+{{- end -}}

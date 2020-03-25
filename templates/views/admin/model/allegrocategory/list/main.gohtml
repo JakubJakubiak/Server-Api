@@ -1,0 +1,35 @@
+{{- define "content" -}}
+
+{{ $prefix := (print .Lang ".view.admin.model.allegrocategory.list.") }}
+<div class="admin-view allegrocategory-admin-view">
+
+<h1>AllegroCategory</h1>
+
+<div class="top-nav">
+  <a type="button" class="btn btn-primary" href="/admin/allegrocategory/insert">
+    {{ TranslateFor "insert_btn" $prefix }}</a>
+  </a>
+</div>
+
+{{ if eq (len .Data.Collection) 0 -}}
+No data to show
+{{- else }}
+  <div class="admin-table">
+    <div class="row head">
+        <div class="col string main">Name</div>
+        <div class="col string">AllegroID</div>
+      <div class="col tools"></div>
+    </div>{{- range $i, $row := .Data.Collection }}
+    <div class="row">
+        <div class="col string main">{{- $row.Name -}}</div>
+        <div class="col string">{{- $row.AllegroID -}}</div>
+      <div class="col tools">
+          {{- template "tools" (dict "Row" $row "Prefix" $prefix) -}}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+{{- end }}
+</div>
+
+{{- end }}

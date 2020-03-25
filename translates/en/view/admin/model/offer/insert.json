@@ -1,0 +1,8 @@
+{
+  "en.view.admin.model.offer.insert": {
+    "title": "Offer",
+    "description": "Add a new offer here.",
+    "submit": "Submit",
+    "go_back_to_list": "Go back to list"
+  }
+}

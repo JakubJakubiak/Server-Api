@@ -1,0 +1,22 @@
+{"en.layout":{
+  "footer": {
+    "signin": "sign in",
+    "signout": "sign out",
+    "signup": "sign up",
+    "title": "Beerpoly"
+  },
+  "head_title": "GoatCMS",
+  "menu": {
+    "about": "About",
+    "download": "Download",
+    "game": "Game",
+    "home": "Home",
+    "join": "Join us",
+    "opensource": "Open Source",
+    "rules": "Rules",
+    "team": "Team"
+  },
+  "navbar": {
+    "home": "GoatCMS"
+  }
+}}

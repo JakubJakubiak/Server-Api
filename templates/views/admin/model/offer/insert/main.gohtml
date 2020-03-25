@@ -1,0 +1,22 @@
+{{- define "content" -}}
+
+{{ $prefix := (print .Lang ".view.admin.model.offer.insert.") }}
+{{ $validPrefix := (print .Lang ".form.valid.") }}
+{{ $formPrefix := (print .Lang ".form.fields.") }}
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1>{{ TranslateFor "title" $prefix}}</h1>
+    {{ TranslateFor "description" $prefix}}
+    <br />
+
+    {{- template "form.model.offer" (dict "Data" .Data.Entity "Lang" .Lang "Valid" .Data.Valid "Fields" .Data.Fields) -}}
+
+    <div class="footer-menu">
+      <a href="/admin/offer">{{ TranslateFor "go_back_to_list" $prefix}}</a>
+    </div>
+
+  </div>
+</div>
+
+{{- end }}
+

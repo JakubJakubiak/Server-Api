@@ -1,0 +1,22 @@
+{"pl.layout":{
+  "footer": {
+    "signin": "Logowanie",
+    "signout": "Wylogowanie",
+    "signup": "Rejestracja",
+    "title": "Beerpoly"
+  },
+  "head_title": "Beerpoly",
+  "menu": {
+    "about": "O grze",
+    "download": "Pobierz",
+    "game": "Gra",
+    "home": "Strona główna",
+    "join": "Dołącz do nas",
+    "opensource": "Open Source",
+    "rules": "Zasady",
+    "team": "Zespół"
+  },
+  "navbar": {
+    "home": "Beerpoly"
+  }
+}}

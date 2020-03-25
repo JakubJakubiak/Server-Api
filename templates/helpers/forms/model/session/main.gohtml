@@ -1,0 +1,31 @@
+{{- define "form.model.session" -}}
+
+{{- $validPrefix:=(print .Lang ".form.valid.") -}}
+{{- $formPrefix:=(print .Lang ".form.fields.") -}}
+
+<form method="post" enctype="application/x-www-form-urlencoded" class="model-session-form">
+
+    {{- if .Fields.Secret -}}
+    <div class="form-group">
+      <label for="Secret">{{TranslateFor "secret" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Secret -}}" name="Secret" type="text">
+      {{- messages .Valid $validPrefix "error" "Secret" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Expires -}}
+    <div class="form-group">
+      <label for="Expires">{{TranslateFor "expires" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Expires -}}" name="Expires" type="number">
+      {{- messages .Valid $validPrefix "error" "Expires" -}}
+    </div>
+
+    {{- end -}}
+
+  <div class="form-group">
+    <input type="submit" class="btn btn-lg btn-primary btn-block" value='{{TranslateFor "submit" $formPrefix}}'></input>
+  </div>
+</form>
+
+{{- end -}}

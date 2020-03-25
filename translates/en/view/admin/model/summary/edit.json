@@ -1,0 +1,9 @@
+{
+  "en.view.admin.model.summary.edit": {
+    "title": "Summary",
+    "description": "Add a new summary here.",
+    "submit": "Submit",
+    "go_back_to_list": "Go back to list",
+    "is_updated": "Updated data"
+  }
+}

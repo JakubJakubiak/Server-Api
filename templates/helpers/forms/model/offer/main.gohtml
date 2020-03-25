@@ -1,0 +1,184 @@
+{{- define "form.model.offer" -}}
+
+{{- $validPrefix:=(print .Lang ".form.valid.") -}}
+{{- $formPrefix:=(print .Lang ".form.fields.") -}}
+
+<form method="post" enctype="application/x-www-form-urlencoded" class="model-offer-form">
+
+    {{- if .Fields.Name -}}
+    <div class="form-group">
+      <label for="Name">{{TranslateFor "name" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Name -}}" name="Name" type="text">
+      {{- messages .Valid $validPrefix "error" "Name" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.AllegroID -}}
+    <div class="form-group">
+      <label for="AllegroID">{{TranslateFor "allegroid" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.AllegroID -}}" name="AllegroID" type="text">
+      {{- messages .Valid $validPrefix "error" "AllegroID" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.WatchersCount -}}
+    <div class="form-group">
+      <label for="WatchersCount">{{TranslateFor "watcherscount" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.WatchersCount -}}" name="WatchersCount" type="number">
+      {{- messages .Valid $validPrefix "error" "WatchersCount" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.VisitsCount -}}
+    <div class="form-group">
+      <label for="VisitsCount">{{TranslateFor "visitscount" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.VisitsCount -}}" name="VisitsCount" type="number">
+      {{- messages .Valid $validPrefix "error" "VisitsCount" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.StockAvailable -}}
+    <div class="form-group">
+      <label for="StockAvailable">{{TranslateFor "stockavailable" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.StockAvailable -}}" name="StockAvailable" type="number">
+      {{- messages .Valid $validPrefix "error" "StockAvailable" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.StockSold -}}
+    <div class="form-group">
+      <label for="StockSold">{{TranslateFor "stocksold" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.StockSold -}}" name="StockSold" type="number">
+      {{- messages .Valid $validPrefix "error" "StockSold" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.StartedAt -}}
+    <div class="form-group">
+      <label for="StartedAt">{{TranslateFor "startedat" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.StartedAt -}}" name="StartedAt" type="bad type datetime">
+      {{- messages .Valid $validPrefix "error" "StartedAt" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.EndingAt -}}
+    <div class="form-group">
+      <label for="EndingAt">{{TranslateFor "endingat" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.EndingAt -}}" name="EndingAt" type="bad type datetime">
+      {{- messages .Valid $validPrefix "error" "EndingAt" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.VendorID -}}
+    <div class="form-group">
+      <label for="VendorID">{{TranslateFor "vendorid" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.VendorID -}}" name="VendorID" type="bad type datetime">
+      {{- messages .Valid $validPrefix "error" "VendorID" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.VendorURL -}}
+    <div class="form-group">
+      <label for="VendorURL">{{TranslateFor "vendorurl" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.VendorURL -}}" name="VendorURL" type="bad type datetime">
+      {{- messages .Valid $validPrefix "error" "VendorURL" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Promoted -}}
+    <div class="form-group">
+      <label for="Promoted">{{TranslateFor "promoted" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Promoted -}}" name="Promoted" type="number">
+      {{- messages .Valid $validPrefix "error" "Promoted" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.CategoryID -}}
+    <div class="form-group">
+      <label for="CategoryID">{{TranslateFor "categoryid" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.CategoryID -}}" name="CategoryID" type="text">
+      {{- messages .Valid $validPrefix "error" "CategoryID" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.PrimaryImage -}}
+    <div class="form-group">
+      <label for="PrimaryImage">{{TranslateFor "primaryimage" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.PrimaryImage -}}" name="PrimaryImage" type="text">
+      {{- messages .Valid $validPrefix "error" "PrimaryImage" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.SellingModeFormat -}}
+    <div class="form-group">
+      <label for="SellingModeFormat">{{TranslateFor "sellingmodeformat" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.SellingModeFormat -}}" name="SellingModeFormat" type="number">
+      {{- messages .Valid $validPrefix "error" "SellingModeFormat" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Price -}}
+    <div class="form-group">
+      <label for="Price">{{TranslateFor "price" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Price -}}" name="Price" type="number">
+      {{- messages .Valid $validPrefix "error" "Price" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Currency -}}
+    <div class="form-group">
+      <label for="Currency">{{TranslateFor "currency" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Currency -}}" name="Currency" type="text">
+      {{- messages .Valid $validPrefix "error" "Currency" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.MinimalPrice -}}
+    <div class="form-group">
+      <label for="MinimalPrice">{{TranslateFor "minimalprice" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.MinimalPrice -}}" name="MinimalPrice" type="number">
+      {{- messages .Valid $validPrefix "error" "MinimalPrice" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.StartingPrice -}}
+    <div class="form-group">
+      <label for="StartingPrice">{{TranslateFor "startingprice" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.StartingPrice -}}" name="StartingPrice" type="number">
+      {{- messages .Valid $validPrefix "error" "StartingPrice" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.CurrentPrice -}}
+    <div class="form-group">
+      <label for="CurrentPrice">{{TranslateFor "currentprice" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.CurrentPrice -}}" name="CurrentPrice" type="number">
+      {{- messages .Valid $validPrefix "error" "CurrentPrice" -}}
+    </div>
+
+    {{- end -}}
+
+  <div class="form-group">
+    <input type="submit" class="btn btn-lg btn-primary btn-block" value='{{TranslateFor "submit" $formPrefix}}'></input>
+  </div>
+</form>
+
+{{- end -}}

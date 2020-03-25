@@ -1,0 +1,10 @@
+{
+  "en.view.admin.model.offer.list": {
+    "title": "Offer",
+    "description": "Add a new offer here.",
+    "submit": "Submit",
+    "edit_btn": "Edit",
+    "insert_btn": "Insert",
+    "delete_btn": "Delete"
+  }
+}

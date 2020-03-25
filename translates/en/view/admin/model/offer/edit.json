@@ -1,0 +1,9 @@
+{
+  "en.view.admin.model.offer.edit": {
+    "title": "Offer",
+    "description": "Add a new offer here.",
+    "submit": "Submit",
+    "go_back_to_list": "Go back to list",
+    "is_updated": "Updated data"
+  }
+}

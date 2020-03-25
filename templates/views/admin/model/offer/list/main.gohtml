@@ -1,0 +1,69 @@
+{{- define "content" -}}
+
+{{ $prefix := (print .Lang ".view.admin.model.offer.list.") }}
+<div class="admin-view offer-admin-view">
+
+<h1>Offer</h1>
+
+<div class="top-nav">
+  <a type="button" class="btn btn-primary" href="/admin/offer/insert">
+    {{ TranslateFor "insert_btn" $prefix }}</a>
+  </a>
+</div>
+
+{{ if eq (len .Data.Collection) 0 -}}
+No data to show
+{{- else }}
+  <div class="admin-table">
+    <div class="row head">
+        <div class="col string main">Name</div>
+        <div class="col string">AllegroID</div>
+        <div class="col int">WatchersCount</div>
+        <div class="col int">VisitsCount</div>
+        <div class="col int">StockAvailable</div>
+        <div class="col int">StockSold</div>
+        <div class="col datetime">StartedAt</div>
+        <div class="col datetime">EndingAt</div>
+        <div class="col datetime">VendorID</div>
+        <div class="col datetime">VendorURL</div>
+        <div class="col int">Promoted</div>
+        <div class="col string">CategoryID</div>
+        <div class="col string">PrimaryImage</div>
+        <div class="col int">SellingModeFormat</div>
+        <div class="col int">Price</div>
+        <div class="col string">Currency</div>
+        <div class="col int">MinimalPrice</div>
+        <div class="col int">StartingPrice</div>
+        <div class="col int">CurrentPrice</div>
+      <div class="col tools"></div>
+    </div>{{- range $i, $row := .Data.Collection }}
+    <div class="row">
+        <div class="col string main">{{- $row.Name -}}</div>
+        <div class="col string">{{- $row.AllegroID -}}</div>
+        <div class="col int">{{- $row.WatchersCount -}}</div>
+        <div class="col int">{{- $row.VisitsCount -}}</div>
+        <div class="col int">{{- $row.StockAvailable -}}</div>
+        <div class="col int">{{- $row.StockSold -}}</div>
+        <div class="col datetime">{{- $row.StartedAt -}}</div>
+        <div class="col datetime">{{- $row.EndingAt -}}</div>
+        <div class="col datetime">{{- $row.VendorID -}}</div>
+        <div class="col datetime">{{- $row.VendorURL -}}</div>
+        <div class="col int">{{- $row.Promoted -}}</div>
+        <div class="col string">{{- $row.CategoryID -}}</div>
+        <div class="col string">{{- $row.PrimaryImage -}}</div>
+        <div class="col int">{{- $row.SellingModeFormat -}}</div>
+        <div class="col int">{{- $row.Price -}}</div>
+        <div class="col string">{{- $row.Currency -}}</div>
+        <div class="col int">{{- $row.MinimalPrice -}}</div>
+        <div class="col int">{{- $row.StartingPrice -}}</div>
+        <div class="col int">{{- $row.CurrentPrice -}}</div>
+      <div class="col tools">
+          {{- template "tools" (dict "Row" $row "Prefix" $prefix) -}}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+{{- end }}
+</div>
+
+{{- end }}

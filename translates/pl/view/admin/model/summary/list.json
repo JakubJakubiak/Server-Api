@@ -1,0 +1,10 @@
+{
+  "pl.view.admin.model.summary.list": {
+    "title": "Summary",
+    "description": "Add a new summary here.",
+    "submit": "Submit",
+    "edit_btn": "Edit",
+    "insert_btn": "Insert",
+    "delete_btn": "Delete"
+  }
+}

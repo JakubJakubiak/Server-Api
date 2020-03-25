@@ -1,0 +1,40 @@
+{{- define "form.model.log" -}}
+
+{{- $validPrefix:=(print .Lang ".form.valid.") -}}
+{{- $formPrefix:=(print .Lang ".form.fields.") -}}
+
+<form method="post" enctype="application/x-www-form-urlencoded" class="model-log-form">
+
+    {{- if .Fields.Title -}}
+    <div class="form-group">
+      <label for="Title">{{TranslateFor "title" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Title -}}" name="Title" type="text">
+      {{- messages .Valid $validPrefix "error" "Title" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Message -}}
+    <div class="form-group">
+      <label for="Message">{{TranslateFor "message" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Message -}}" name="Message" type="text">
+      {{- messages .Valid $validPrefix "error" "Message" -}}
+    </div>
+
+    {{- end -}}
+
+    {{- if .Fields.Datetime -}}
+    <div class="form-group">
+      <label for="Datetime">{{TranslateFor "datetime" $formPrefix}}:</label>
+      <input class="form-control" value="{{- .Data.Datetime -}}" name="Datetime" type="text">
+      {{- messages .Valid $validPrefix "error" "Datetime" -}}
+    </div>
+
+    {{- end -}}
+
+  <div class="form-group">
+    <input type="submit" class="btn btn-lg btn-primary btn-block" value='{{TranslateFor "submit" $formPrefix}}'></input>
+  </div>
+</form>
+
+{{- end -}}

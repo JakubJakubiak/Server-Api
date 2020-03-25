@@ -1,0 +1,10 @@
+{
+  "pl.view.admin.model.log.list": {
+    "title": "Log",
+    "description": "Add a new log here.",
+    "submit": "Submit",
+    "edit_btn": "Edit",
+    "insert_btn": "Insert",
+    "delete_btn": "Delete"
+  }
+}
